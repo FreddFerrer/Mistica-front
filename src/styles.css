@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+.btn-change-color:hover {
+    background-color: #fd7e14; /* Cambia el color a #fd7e14 cuando el mouse esté encima */
+}
+
+
+    
+.scrollable-comments {
+    max-height: 400px; 
+    overflow-y: auto;
+}
+
+

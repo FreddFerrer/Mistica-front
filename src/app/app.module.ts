@@ -7,7 +7,6 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CoursesComponent } from './pages/courses/courses.component';
 import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { ContactComponent } from './pages/contact/contact.component';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    CoursesComponent,
     ContactComponent
   ],
   imports: [
