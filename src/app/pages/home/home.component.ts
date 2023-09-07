@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ComentariosService } from 'src/app/services/comentarios.service';
+import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,6 @@ import { ComentariosService } from 'src/app/services/comentarios.service';
 })
 export class HomeComponent {
 
-
-  constructor ( public comentariosService: ComentariosService) {
-    
-  }
+  
 
 }

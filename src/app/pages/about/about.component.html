@@ -112,36 +112,49 @@
                 <div class="text-center mb-5">
                     <h1>Comentarios de personas</h1>
                 </div>
-                <!-- Aquí irán los comentarios -->
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Mnesaje</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let comentario of comentarios">
+                        <th scope="row">{{ comentario.id }}</th>
+                        <td>{{ comentario.nombre }}</td>
+                        <td>{{ comentario.contenido }}</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
                 <div class="col-lg-12 scrollable-comments">
-                    <div class="row">
-                        <div class="col-lg-6 mb-4">
-                            <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                                <!-- Imagen de perfil del comentario (opcional) -->
-                                <div class="cat-overlay p-4">
-                                    <h4 class="text-dark font-weight-medium">Nombre de la persona</h4>
-                                    <p class="mb-0">Comentario realizado por la persona.</p>
-                                </div>
-                            </div>
-                        </div>                   
+                    <div *ngFor="let comentario of comentarios" class="row">
+                      <div class="col-lg-6 mb-4" >
+                        <div class="cat-item position-relative overflow-hidden rounded mb-2">
+                          <div class="cat-overlay p-4">
+                            <h4 class="text-dark font-weight-medium">{{ comentario.nombre }}</h4>
+                            <p class="mb-0">{{ comentario.contenido }}</p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
                 
                 <!-- Dentro del div col-lg-12 para comentarios -->
-                    <form class="mb-4">
-                        <div class="form-group">
-                            <input type="text" class="form-control border-0 p-4" placeholder="Nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control border-0 p-4" placeholder="Opinión" rows="4" required></textarea>
-                        </div>
-                        <button class="btn btn-dark btn-block border-0 py-3 btn-change-color" type="submit">Enviar opinion</button>
-                    </form>
-
+                <form class="mb-4">
+                    <div class="form-group">
+                        <input type="text" id="nombre" class="form-control border-0 p-4" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="opinion" class="form-control border-0 p-4" placeholder="Opinión" rows="4" required></textarea>
+                    </div>
+                    <button id="enviar-opinion" class="btn btn-dark btn-block border-0 py-3 btn-change-color" type="button">Enviar opinion</button>
+                </form>
             </div>
         </div>
     </div>
 </div>
-
-
 <!--Fin comentarios-->
+

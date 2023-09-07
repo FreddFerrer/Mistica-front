@@ -1,29 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ComentariosInterface } from '../interfaces/comentarios';
+import { Observable } from 'rxjs';
+import { Comentario } from '../models/comentario';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ComentariosService {
 
-  cargando = true;
-  comentarios: ComentariosInterface[] = [];
+  private comentariosUrl = 'http://localhost:8080/api/comentarios';
 
-  constructor(private http: HttpClient) {
-    console.log('comentarios cargadossss')
-    this.cargarComentarios()
-   }
+  constructor(private http: HttpClient) {}
 
-   private cargarComentarios(){
-    return new Promise( ( resolve, reject ) => {
-      this.http.get<any>('http://localhost:8080/api/comentarios')
-      .subscribe( (resp: ComentariosInterface[]) => {
-        this.comentarios = resp;
-        this.cargando = false;
-        console.log('funciona')
-        console.log(this.comentarios)
-      });
-    });
-   }
+  //traer los comentarios
+  getComentarios(): Observable<Comentario[]> {
+    return this.http.get<Comentario[]>(this.comentariosUrl);
+  }
+
+  //comentar
+  crearComentario(comentario:Comentario): Observable<Comentario> {
+    return this.http.post<Comentario>(this.comentariosUrl, comentario)
+  }
 }
