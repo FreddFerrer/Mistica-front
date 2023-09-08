@@ -1,48 +1,5 @@
-<div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-    <div class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-5">
-                <div class="card border-0">
-                    <div class="card-header bg-light text-center p-4">
-                        <h1 class="m-0">Iniciar sesión</h1>
-                    </div>
-                    <div class="card-body rounded-bottom bg-primary p-5">
-                        <form>
-                            <div class="form-group">
-                                <input type="email" class="form-control border-0 p-4" placeholder="Correo Electrónico"
-                                required="required" />
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control border-0 p-4" placeholder="Contraseña"
-                                required="required" />
-                            </div>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="userType" id="studentParent" value="studentParent" required>
-                                    <label class="form-check-label" for="studentParent">
-                                        Estudiante/Padre
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="userType" id="teacher" value="teacher">
-                                    <label class="form-check-label" for="teacher">
-                                        Docente
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="userType" id="admin" value="admin">
-                                    <label class="form-check-label" for="admin">
-                                        Personal Administrativo
-                                    </label>
-                                </div>
-                            </div>
-                            <div>
-                                <button class="btn btn-dark btn-block border-0 py-3 btn-change-color" type="submit">Iniciar sesión</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>  
+<app-header></app-header>
+
+<app-login></app-login>
+
+<app-footer></app-footer>

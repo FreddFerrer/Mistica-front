@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComentariosService } from './services/comentarios.service';
+import { ComentarioService } from './services/comentario.service';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +9,5 @@ import { ComentariosService } from './services/comentarios.service';
 export class AppComponent {
   title = 'educar';
 
-  constructor(public comentariosService: ComentariosService){}
+  constructor(public comentariosService: ComentarioService){}
 }

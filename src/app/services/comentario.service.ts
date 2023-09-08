@@ -6,7 +6,7 @@ import { Comentario } from '../models/comentario';
 @Injectable({
   providedIn: 'root'
 })
-export class ComentariosService {
+export class ComentarioService {
 
   private comentariosUrl = 'http://localhost:8080/api/comentarios';
 
