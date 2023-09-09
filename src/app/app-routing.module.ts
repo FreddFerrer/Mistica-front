@@ -12,9 +12,11 @@ import { EditarMateriaComponent } from './pages/editar-materia/editar-materia.co
 import { DetalleAlumnoComponent } from './pages/detalle-alumno/detalle-alumno.component';
 import { AgregarAlumnoComponent } from './pages/agregar-alumno/agregar-alumno.component';
 import { EditarAlumnoComponent } from './pages/editar-alumno/editar-alumno.component';
+import { IndexComponent } from './pages/index/index.component';
 
 const routes: Routes = [
   { path: 'home', component: LoginComponent },
+  { path: 'index', component: IndexComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'materias', component: MateriaComponent },
   { path: 'materias/agregar', component: AgregarMateriaComponent },
@@ -25,7 +27,7 @@ const routes: Routes = [
   { path: 'alumnos/editar/:id', component: EditarAlumnoComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+ 
 ];
 
 @NgModule({

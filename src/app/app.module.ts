@@ -20,6 +20,7 @@ import { EditarMateriaComponent } from './pages/editar-materia/editar-materia.co
 import { DetalleAlumnoComponent } from './pages/detalle-alumno/detalle-alumno.component';
 import { AgregarAlumnoComponent } from './pages/agregar-alumno/agregar-alumno.component';
 import { EditarAlumnoComponent } from './pages/editar-alumno/editar-alumno.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 
 @NgModule({
@@ -39,7 +40,9 @@ import { EditarAlumnoComponent } from './pages/editar-alumno/editar-alumno.compo
     EditarMateriaComponent,
     DetalleAlumnoComponent,
     AgregarAlumnoComponent,
-    EditarAlumnoComponent
+    EditarAlumnoComponent,
+    MenuComponent,
+    
   ],
   imports: [
     BrowserModule,

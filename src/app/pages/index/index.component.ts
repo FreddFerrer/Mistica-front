@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-index',
@@ -6,5 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent {
+
+  rol: string;
+
+  constructor(private tokenService: TokenService,
+    ){}
+
+
+  ngOnInit() {
+    if (this.tokenService.getToken()) {
+      
+      this.rol = this.tokenService.getAuthority();
+    }
+  }
 
 }
