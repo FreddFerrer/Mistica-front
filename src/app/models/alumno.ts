@@ -6,4 +6,5 @@ export class Alumno {
   nombre: string;
   apellido: string;
   materias: Materia[];
+  nombreCompleto: string;
 }

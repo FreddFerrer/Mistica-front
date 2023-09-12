@@ -4,10 +4,10 @@ export class Comentario {
   contenido: string;
   fecha: string;
 
-  constructor(id: number, nombre: string, contenido: string, fecha: string) {
-    this.id = id;
+  constructor(nombre: string, contenido: string) {
+    
     this.nombre = nombre;
     this.contenido = contenido;
-    this.fecha = fecha;
+    
   }
 }

@@ -9,7 +9,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { IndexComponent } from './pages/index/index.component';
@@ -21,6 +21,10 @@ import { DetalleAlumnoComponent } from './pages/detalle-alumno/detalle-alumno.co
 import { AgregarAlumnoComponent } from './pages/agregar-alumno/agregar-alumno.component';
 import { EditarAlumnoComponent } from './pages/editar-alumno/editar-alumno.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { InterceptorService } from './interceptors/interceptor.service';
+import { DocenteComponent } from './pages/docente/docente.component';
+import { AgregarDocenteComponent } from './pages/agregar-docente/agregar-docente.component';
+
 
 
 @NgModule({
@@ -42,15 +46,24 @@ import { MenuComponent } from './pages/menu/menu.component';
     AgregarAlumnoComponent,
     EditarAlumnoComponent,
     MenuComponent,
+    DocenteComponent,
+    AgregarDocenteComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

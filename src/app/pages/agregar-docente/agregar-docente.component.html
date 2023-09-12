@@ -1,0 +1,37 @@
+<app-menu></app-menu>
+<div class="container text-center imagenFondo">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Nuevo docente</h5>
+  
+            <!-- Formulario para ingresar datos del docente -->
+            <form #docentesForm="ngForm" (ngSubmit)="insertar(docentesForm.value)">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido" [(ngModel)]="apellido" required>
+              </div>
+              <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Username" [(ngModel)]="username" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" required>
+              </div>
+  
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  

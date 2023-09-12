@@ -1,0 +1,28 @@
+<app-menu></app-menu>
+<div id="main-content" class="container text-center my-5 imagenFondo">
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Lista de Docentes</h5>
+  
+        <!-- Botón para agregar un nuevo alumno -->
+        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop" routerLink="/docentes/agregar">Agregar Nuevo Docente</button>
+  
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span class="font-weight-bold">ID</span>
+            <span class="font-weight-bold">Nombre y Apellido</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let docente of docentes">
+            <span>{{ docente.id }}</span>
+            <span>{{ docente.nombreCompleto }}</span>
+          </li>
+          <!-- Agrega más elementos de la lista aquí -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+ 

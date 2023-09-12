@@ -34,14 +34,11 @@ export class TokenService {
 
   public setAuthorities(authority: string): void {
     window.sessionStorage.removeItem(AUTHORITY_KEY);
-    window.sessionStorage.setItem(AUTHORITY_KEY, JSON.stringify(authority));
+  window.sessionStorage.setItem(AUTHORITY_KEY, authority);
   }
 
   public getAuthority(): string | null {
-    if (sessionStorage.getItem(AUTHORITY_KEY)) {
-      return JSON.parse(sessionStorage.getItem(AUTHORITY_KEY)).authority;
-    }
-    return null;
+    return sessionStorage.getItem(AUTHORITY_KEY);
   }
 
   public logOut(): void {

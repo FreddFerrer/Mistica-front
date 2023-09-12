@@ -1,1 +1,26 @@
-<p>agregar-materia works!</p>
+<app-menu></app-menu>
+<div class="container text-center imagenFondo">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Nueva materia</h5>
+  
+            <!-- Formulario para ingresar datos del docente -->
+            <form #materiasForm="ngForm" (ngSubmit)="insertar(materiasForm.value)">
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="apellido" class="form-label">Año Escolar</label>
+                <input type="text" class="form-control" id="anoEscolar" placeholder="Año Escolar" [(ngModel)]="anoEscolar" required>
+              </div>
+  
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -8,20 +8,18 @@ export class Usuario {
   rol: string; 
   nombre: string;
   apellido: string;
+  nombreCompleto: string;
 
   constructor(
     username: string,
-    password: string,
-    email: string,
-    rol: string, 
+    email: string, 
     nombre: string,
     apellido: string
   ) {
     this.username = username;
-    this.password = password;
     this.email = email;
-    this.rol = rol;
     this.nombre = nombre;
     this.apellido = apellido;
+    this.nombreCompleto = `${nombre} ${apellido}`
   }
 }

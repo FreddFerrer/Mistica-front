@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Login } from 'src/app/models/login';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
+import { NgToastService } from 'ng-angular-popup';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,9 @@ export class LoginComponent implements OnInit {
 
   constructor(private tokenService: TokenService,
     private authService: AuthService,
-    private router: Router){}
+    private router: Router,
+    private toast: NgToastService
+    ){}
 
 
   ngOnInit() {
@@ -42,12 +45,13 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.username);
         this.tokenService.setAuthorities(data.rol);
         this.rol = data.rol;
+        this.toast.success({detail:"SUCCESS",summary:'Ingreso con exito',duration:5000});
         this.router.navigate(['/index']);
       },
       err => {
         this.isLogged = false;
         this.errMsj = err.error.message;
- 
+        this.toast.error({detail:"ERROR",summary:'Credenciales incorrectas',sticky:true});
         console.log(this.errMsj);
       }
     );

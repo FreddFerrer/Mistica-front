@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class MateriaService {
 
-  private materiasUrl = 'http://localhost:8080/api/docente/materias';
+  private materiasUrl = 'http://localhost:8080/api/materias';
 
   constructor(private http: HttpClient) {}
 
@@ -24,7 +24,7 @@ export class MateriaService {
   }
 
   //agregar una nueva materia
-  crearComentario(materia:Materia): Observable<Materia> {
+  crearMateria(materia:Materia): Observable<Materia> {
     return this.http.post<Materia>(this.materiasUrl, materia)
   }
 

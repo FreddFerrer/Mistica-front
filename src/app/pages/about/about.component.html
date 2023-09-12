@@ -145,14 +145,14 @@
                   </div>
                 
                 <!-- Dentro del div col-lg-12 para comentarios -->
-                <form class="mb-4">
+                <form #comentarioForm="ngForm" (ngSubmit)="insertar(comentarioForm.value)"  novalidate class="mb-4">
                     <div class="form-group">
-                        <input type="text" id="nombre" class="form-control border-0 p-4" placeholder="Nombre" required>
+                        <input type="text" id="nombre" class="form-control border-0 p-4" placeholder="Nombre" [(ngModel)]="nombre" name="nombre"  required>
                     </div>
                     <div class="form-group">
-                        <textarea id="opinion" class="form-control border-0 p-4" placeholder="Opinión" rows="4" required></textarea>
+                        <textarea id="contenido" class="form-control border-0 p-4" placeholder="Opinión" rows="4" [(ngModel)]="contenido" name="contenido" required></textarea>
                     </div>
-                    <button id="enviar-opinion" class="btn btn-dark btn-block border-0 py-3 btn-change-color" type="button">Enviar opinion</button>
+                    <button id="enviar-opinion" class="btn btn-dark btn-block border-0 py-3 btn-change-color" type="submit">Enviar opinion</button>
                 </form>
             </div>
         </div>
