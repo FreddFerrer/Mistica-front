@@ -1,4 +1,10 @@
 .imagenFondo {
-    background-image: url(../../../assets/img/fondoIndex.jpeg);
+    background-image: url(../../../assets/img/Books.png);
     height: 100vh;
+    width: 90%;
+    margin-left: 10%;
 }
+
+.bg-white-50 {
+    background-color: rgba(255, 255, 255, 0.5); /* Cambia el valor "0.5" para ajustar la transparencia */
+  }

@@ -11,6 +11,9 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class AgregarDocenteComponent implements OnInit{
 
+  isLogged = false;
+  rol: string;
+  
 
   nombre: string;
   apellido: string;
@@ -24,6 +27,12 @@ export class AgregarDocenteComponent implements OnInit{
   }
 
   ngOnInit() {
+    if (this.tokenService.getToken()) {
+      this.rol = this.tokenService.getAuthority()
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
 

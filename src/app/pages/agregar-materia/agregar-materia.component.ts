@@ -13,6 +13,8 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class AgregarMateriaComponent implements OnInit{
 
+  isLogged = false;
+  rol: string;
 
   nombre: string;
   anoEscolar: string;
@@ -25,6 +27,12 @@ export class AgregarMateriaComponent implements OnInit{
   }
 
   ngOnInit() {
+    if (this.tokenService.getToken()) {
+      this.rol = this.tokenService.getAuthority()
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
 
