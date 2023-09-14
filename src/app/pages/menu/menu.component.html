@@ -8,13 +8,13 @@
       <li class="nav-item">
         <a class="nav-link" routerLink="/index"><i class="fas fa-home"></i> Inicio</a>
       </li>
-      <li class="nav-item" *ngIf="isLogged">
+      <li class="nav-item" *ngIf="isLogged && (rol === 'ROLE_AUTORIDAD' || rol === 'ROLE_DOCENTE')" >
         <a class="nav-link" routerLink="/alumnos"><i class="far fa-list-alt"></i> Alumnos</a>
       </li>
-      <li class="nav-item" *ngIf="isLogged">
+      <li class="nav-item" *ngIf="isLogged && (rol === 'ROLE_AUTORIDAD' || rol === 'ROLE_DOCENTE' || rol === 'ROLE_ESTUDIANTE')">
         <a class="nav-link" routerLink="/materias"><i class="far fa-list-alt"></i> Materias</a>
       </li>
-      <li class="nav-item" *ngIf="isLogged">
+      <li class="nav-item" *ngIf="isLogged && rol === 'ROLE_AUTORIDAD'" >
         <a class="nav-link" routerLink="/docentes"><i class="far fa-list-alt"></i> Docentes</a>
       </li>
       <li class="nav-item" *ngIf="!isLogged">

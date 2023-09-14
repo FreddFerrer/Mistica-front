@@ -35,6 +35,12 @@ export class MenuComponent implements OnInit {
     switch (rol) {
       case 'ROLE_AUTORIDAD':
         return 'Autoridad';
+      case 'ROLE_DOCENTE':
+        return 'Docente';  
+      case 'ROLE_PADRE':
+        return 'Padre';
+      case 'ROLE_ESTUDIANTE':
+        return 'Estudiante';
       default:
         return '';
     }

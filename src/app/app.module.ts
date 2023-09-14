@@ -17,7 +17,6 @@ import { MateriaComponent } from './pages/materia/materia.component';
 import { AlumnoComponent } from './pages/alumno/alumno.component';
 import { AgregarMateriaComponent } from './pages/agregar-materia/agregar-materia.component';
 import { EditarMateriaComponent } from './pages/editar-materia/editar-materia.component';
-import { DetalleAlumnoComponent } from './pages/detalle-alumno/detalle-alumno.component';
 import { AgregarAlumnoComponent } from './pages/agregar-alumno/agregar-alumno.component';
 import { EditarAlumnoComponent } from './pages/editar-alumno/editar-alumno.component';
 import { MenuComponent } from './pages/menu/menu.component';
@@ -42,7 +41,6 @@ import { AgregarDocenteComponent } from './pages/agregar-docente/agregar-docente
     AlumnoComponent,
     AgregarMateriaComponent,
     EditarMateriaComponent,
-    DetalleAlumnoComponent,
     AgregarAlumnoComponent,
     EditarAlumnoComponent,
     MenuComponent,

@@ -16,7 +16,7 @@ export class AgregarMateriaComponent implements OnInit{
   isLogged = false;
   rol: string;
 
-  nombre: string;
+  nombreMateria: string;
   anoEscolar: string;
   
 
@@ -37,11 +37,12 @@ export class AgregarMateriaComponent implements OnInit{
 
 
   insertar(nuevaMateria: Materia){
+    
     this.materiaService.crearMateria(nuevaMateria).subscribe(
       (materiaCreada) => {
         console.log('Materia creada:', materiaCreada);
         // Puedes hacer aquí cualquier acción adicional después de crear el comentario, si es necesario.
-        this.router.navigate(['/index'])
+        this.router.navigate(['/materias'])
       },
       (error) => {
         console.error('Error al crear la materia:', error);
@@ -49,5 +50,5 @@ export class AgregarMateriaComponent implements OnInit{
       })
   }
 
-}
+  }
 

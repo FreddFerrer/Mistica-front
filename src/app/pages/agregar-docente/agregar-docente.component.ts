@@ -47,7 +47,7 @@ export class AgregarDocenteComponent implements OnInit{
       (docenteCreado) => {
         console.log('Docente creado:', docenteCreado);
         // Puedes hacer aquí cualquier acción adicional después de crear el comentario, si es necesario.
-        this.router.navigate(['/index'])
+        this.router.navigate(['/docentes'])
       },
       (error) => {
         console.error('Error al crear el docente:', error);

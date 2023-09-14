@@ -11,7 +11,6 @@ export class Materia {
     constructor(nombreMateria: string, anoEscolar: string) {
         this.nombreMateria = nombreMateria;
         this.anoEscolar = anoEscolar;
-        this.docente = null;
-        this.alumnos = [];
+        
     }
 }

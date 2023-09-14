@@ -10,19 +10,19 @@
             <form #docentesForm="ngForm" (ngSubmit)="insertar(docentesForm.value)">
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="nombre" required>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="nombre" name="nombre" required>
               </div>
               <div class="mb-3">
                 <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Apellido" [(ngModel)]="apellido" required>
+                <input type="text" class="form-control" id="apellido" placeholder="Apellido" [(ngModel)]="apellido" name="apellido" required>
               </div>
               <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Username" [(ngModel)]="username" required>
+                <input type="text" class="form-control" id="username" placeholder="Username" [(ngModel)]="username" name="username" required>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" required>
+                <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" name="email" required>
               </div>
   
               <button type="submit" class="btn btn-primary">Submit</button>

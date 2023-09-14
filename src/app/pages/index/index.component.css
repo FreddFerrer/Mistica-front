@@ -1,6 +1,18 @@
 .imagenFondo {
     background-image: url(../../../assets/img/Books.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    width: 90%;
-    margin-left: 10%;
 }
+
+
+  
+  .welcome-message {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+  }

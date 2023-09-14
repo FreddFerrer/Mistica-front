@@ -9,12 +9,12 @@
             <!-- Formulario para ingresar datos del docente -->
             <form #materiasForm="ngForm" (ngSubmit)="insertar(materiasForm.value)">
               <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre" [(ngModel)]="nombre" required>
+                <label for="nombreMateria" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreMateria" placeholder="Nombre" [(ngModel)]="nombreMateria" name="nombreMateria" required>
               </div>
               <div class="mb-3">
-                <label for="apellido" class="form-label">Año Escolar</label>
-                <input type="text" class="form-control" id="anoEscolar" placeholder="Año Escolar" [(ngModel)]="anoEscolar" required>
+                <label for="anoEscolar" class="form-label">Año Escolar</label>
+                <input type="text" class="form-control" id="anoEscolar" placeholder="Año Escolar" [(ngModel)]="anoEscolar" name="anoEscolar" required>
               </div>
   
               <button type="submit" class="btn btn-primary">Submit</button>

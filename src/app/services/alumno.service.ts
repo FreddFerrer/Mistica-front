@@ -27,7 +27,7 @@ export class AlumnoService {
 
   //agregar un nuevo alumno
   crearAlumno(alumno:Alumno): Observable<Alumno> {
-    return this.http.post<Alumno>(this.alumnossUrl, alumno)
+    return this.http.post<Alumno>(this.alumnossUrl + "/nuevo", alumno)
   }
 
   // Eliminar un alumno por ID

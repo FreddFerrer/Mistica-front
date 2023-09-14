@@ -7,7 +7,7 @@
             <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Lista de Alumnos</h5>
   
             <!-- Botón para agregar un nuevo alumno -->
-            <button class="btn btn-primary mb-3 ">Agregar Nuevo Alumno</button>
+            <button class="btn btn-primary mb-3 " routerLink="/alumnos/agregar" *ngIf="rol === 'ROLE_AUTORIDAD'">Agregar Nuevo Alumno</button>
       
             <ul class="list-group">
               <li class="list-group-item d-flex justify-content-between align-items-center">
