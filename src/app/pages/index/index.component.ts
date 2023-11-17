@@ -4,6 +4,7 @@ import { Alumno } from 'src/app/models/alumno';
 import { AlumnoService } from 'src/app/services/alumno.service';
 import { TokenService } from 'src/app/services/token.service';
 
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -17,7 +18,11 @@ export class IndexComponent implements OnInit {
   rolTexto: string;
   nombreRol: string;
 
+  
+
   constructor(private tokenService: TokenService, private router: Router) { }
+
+  
 
   ngOnInit() {
     if (this.tokenService.getToken()) {

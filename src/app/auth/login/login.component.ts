@@ -4,6 +4,7 @@ import { Login } from 'src/app/models/login';
 import { AuthService } from 'src/app/services/auth.service';
 import { TokenService } from 'src/app/services/token.service';
 import { NgToastService } from 'ng-angular-popup';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -19,12 +20,17 @@ export class LoginComponent implements OnInit {
   password: string;
   rol: string;
   errMsj: string;
+  loginSuccess: boolean;
+  loginError: boolean;
 
   constructor(private tokenService: TokenService,
     private authService: AuthService,
     private router: Router,
-    private toast: NgToastService
-    ){}
+    private toastr: ToastrService
+    ){
+      this.loginSuccess = false; 
+      this.loginError = false;
+    }
 
 
   ngOnInit() {
@@ -45,15 +51,25 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.username);
         this.tokenService.setAuthorities(data.rol);
         this.rol = data.rol;
-        this.toast.success({detail:"SUCCESS",summary:'Ingreso con exito',duration:5000});
+        this.toastr.success('Logeado correctamente')
         this.router.navigate(['/index']);
       },
       err => {
         this.isLogged = false;
         this.errMsj = err.error.message;
-        this.toast.error({detail:"ERROR",summary:'Credenciales incorrectas',sticky:true});
+        this.toastr.error('Usuario o contraseña incorrectas')
         console.log(this.errMsj);
       }
+
+      
     );
+    if (this.username === 'usuario' && this.password === 'contraseña') {
+      // Supongamos que esta condición verifica un inicio de sesión exitoso.
+      this.loginSuccess = true;
+      this.loginError = false;
+    } else {
+      this.loginSuccess = false;
+      this.loginError = true;
+    }
   }
 }

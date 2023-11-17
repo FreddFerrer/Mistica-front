@@ -25,7 +25,7 @@ export class MateriaService {
 
   //agregar una nueva materia
   crearMateria(materia: Materia): Observable<Materia> {
-    return this.http.post<Materia>(this.materiasUrl + "/nueva" , materia)
+    return this.http.post<Materia>((this.materiasUrl + '/nueva'), materia)
   }
 
   // Actualizar una materia por ID

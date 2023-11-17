@@ -18,6 +18,9 @@ export class AgregarMateriaComponent implements OnInit{
 
   nombreMateria: string;
   anoEscolar: string;
+  horarioEntrada: string;
+  horarioSalida: string;
+  turno: string;
   
 
   constructor(private tokenService: TokenService, 
@@ -35,20 +38,28 @@ export class AgregarMateriaComponent implements OnInit{
     }
   }
 
+  onCreate(): void {
+    const nuevaMateria = new Materia(this.nombreMateria, this.anoEscolar, 
+      this.horarioEntrada, this.horarioSalida,
+      this.turno);
+    this.materiaService.crearMateria(nuevaMateria)
+    console.log(nuevaMateria)
+  }
+
 
   insertar(nuevaMateria: Materia){
     
     this.materiaService.crearMateria(nuevaMateria).subscribe(
       (materiaCreada) => {
         console.log('Materia creada:', materiaCreada);
-        // Puedes hacer aquí cualquier acción adicional después de crear el comentario, si es necesario.
+        
         this.router.navigate(['/materias'])
       },
       (error) => {
         console.error('Error al crear la materia:', error);
         // Puedes manejar el error aquí, por ejemplo, mostrar un mensaje al usuario.
       })
-  }
+    }
 
   }
 

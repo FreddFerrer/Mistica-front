@@ -6,5 +6,25 @@
 }
 
 .bg-white-50 {
-    background-color: rgba(255, 255, 255, 0.5); /* Cambia el valor "0.5" para ajustar la transparencia */
+    background-color: rgba(255, 255, 255, 0.5); 
   }
+
+.estilo1 { 
+    
+  
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: #555555;
+  margin-bottom: 5px;
+  padding: 15px;
+  transition: all 0.2s ease-in-out;
+}
+
+.estilo1:hover{
+    background-color: #F5F5F5;
+  color: #333333;
+  cursor: pointer;
+}
+
+  
+  

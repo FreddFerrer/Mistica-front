@@ -11,11 +11,10 @@
   
         <ul class="list-group">
           <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span class="font-weight-bold">ID</span>
             <span class="font-weight-bold">Nombre y Apellido</span>
           </li>
           <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let docente of docentes">
-            <span>{{ docente.id }}</span>
+
             <span>{{ docente.nombreCompleto }}</span>
           </li>
           <!-- Agrega más elementos de la lista aquí -->

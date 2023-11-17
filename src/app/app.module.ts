@@ -23,6 +23,9 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { InterceptorService } from './interceptors/interceptor.service';
 import { DocenteComponent } from './pages/docente/docente.component';
 import { AgregarDocenteComponent } from './pages/agregar-docente/agregar-docente.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -47,12 +50,15 @@ import { AgregarDocenteComponent } from './pages/agregar-docente/agregar-docente
     DocenteComponent,
     AgregarDocenteComponent,
     
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     
   ],
   providers: [
