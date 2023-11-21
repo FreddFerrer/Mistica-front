@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class MateriaService {
 
-  private materiasUrl = 'http://localhost:8080/api/materias';
+  private materiasUrl = 'https://mistica-production.up.railway.app/api/materias';
 
   constructor(private http: HttpClient) {}
 

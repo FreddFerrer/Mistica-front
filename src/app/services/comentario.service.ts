@@ -8,7 +8,7 @@ import { Comentario } from '../models/comentario';
 })
 export class ComentarioService {
 
-  private comentariosUrl = 'http://localhost:8080/api/comentarios';
+  private comentariosUrl = 'https://mistica-production.up.railway.app/api/comentarios';
 
   constructor(private http: HttpClient) {}
 

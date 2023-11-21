@@ -9,7 +9,7 @@ import { TokenService } from './token.service';
 })
 export class AlumnoService {
 
-  private alumnossUrl = 'http://localhost:8080/api/alumnos';
+  private alumnossUrl = 'https://mistica-production.up.railway.app/api/alumnos';
 
   constructor(private http: HttpClient,
      private tokenService: TokenService) {}
